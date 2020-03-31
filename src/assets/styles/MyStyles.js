@@ -1,24 +1,24 @@
 const MyStyles = {
-//   fonts: {
-//     black: "Montserrat-Black",
-//     black_italic: "Montserrat-BlackItalic",
-//     bold: "Montserrat-Bold",
-//     bold_italic: "Montserrat-BoldItalic",
-//     extrabold: "Montserrat-ExtraBold",
-//     extrabold_italic: "Montserrat-ExtraBoldItalic",
-//     extraLight: "Montserrat-ExtraLight",
-//     extraLight_italic: "Montserrat-ExtraLightItalic",
-//     light_italic: "Montserrat-LightItalic",
-//     light: "Montserrat-Light",
-//     medium: "Montserrat-Medium",
-//     medium_italic: "Montserrat-MediumItalic",
-//     regular: "Montserrat-Regular",
-//     semi_bold: "Montserrat-SemiBold",
-//     semi_bold_italic: "Montserrat-SemiBoldItalic",
-//     thin_italic: "Montserrat-ThinItalic",
-//     thin: "Montserrat-Thin",
-//     italic: "Montserrat-Italic"
-//   },
+  //   fonts: {
+  //     black: "Montserrat-Black",
+  //     black_italic: "Montserrat-BlackItalic",
+  //     bold: "Montserrat-Bold",
+  //     bold_italic: "Montserrat-BoldItalic",
+  //     extrabold: "Montserrat-ExtraBold",
+  //     extrabold_italic: "Montserrat-ExtraBoldItalic",
+  //     extraLight: "Montserrat-ExtraLight",
+  //     extraLight_italic: "Montserrat-ExtraLightItalic",
+  //     light_italic: "Montserrat-LightItalic",
+  //     light: "Montserrat-Light",
+  //     medium: "Montserrat-Medium",
+  //     medium_italic: "Montserrat-MediumItalic",
+  //     regular: "Montserrat-Regular",
+  //     semi_bold: "Montserrat-SemiBold",
+  //     semi_bold_italic: "Montserrat-SemiBoldItalic",
+  //     thin_italic: "Montserrat-ThinItalic",
+  //     thin: "Montserrat-Thin",
+  //     italic: "Montserrat-Italic"
+  //   },
   colors: {
     primary: "#FF7B7B",
     secondary: "#343434",
@@ -37,6 +37,15 @@ const MyStyles = {
       "20": "rgba(0,0,0,0.2)",
       "10": "rgba(0,0,0,0.1)"
     }
+  },
+  shadow: {
+    shadowColor: "#000",
+    shadowOpacity: 0.2,
+    shadowOffset: {
+      width: 4,
+      height: 4
+    },
+    elevation: 2
   }
 };
 
