@@ -10,7 +10,10 @@ export default function CreatePostButton() {
   const { navigate, goBack } = useNavigation();
 
   return (
-    <TouchableOpacity Onpress={navigate("CreatePost")} style={styles.goButton}>
+    <TouchableOpacity
+      onPress={() => navigate("CreatePost")}
+      style={styles.goButton}
+    >
       <Text style={{ fontSize: 16, color: "#fff" }}>
         Criar uma nova publicação
       </Text>

@@ -3,7 +3,7 @@ import { View, StyleSheet, ScrollView, Text } from "react-native";
 import Header from "../components/Header";
 import { useNavigation } from "react-navigation-hooks";
 import MyStyles from "../assets/styles/MyStyles";
-import PostBoxEdit from "../components/PostBoxEdit";
+import CreatePostBox from "../components/CreatePostBox";
 import CreatePostButton from "../components/CreatePostButton";
 
 // import { Container } from './styles';
@@ -33,15 +33,11 @@ export default function CreatePost() {
               color: MyStyles.colors.primary
             }}
           >
-            Minhas publicações
+            Criar nova pubicação
           </Text>
 
-          <PostBoxEdit />
-          <PostBoxEdit />
-          <PostBoxEdit />
-          <PostBoxEdit />
+          <CreatePostBox />
         </ScrollView>
-        <CreatePostButton />
       </View>
     </View>
   );
