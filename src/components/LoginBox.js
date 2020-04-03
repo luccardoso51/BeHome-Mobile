@@ -32,12 +32,11 @@ export default function components(props) {
           color: MyStyles.colors.primary
         }}
       >
-        {" "}
-        Login{" "}
+        Login
       </Text>
       <View
         style={{
-          paddingVertical: 15,
+          paddingVertical: 5,
           width: "100%",
           marginBottom: 20,
           // backgroundColor: "#000",
@@ -50,8 +49,11 @@ export default function components(props) {
       >
         <TextInput
           style={{
-            height: 15
+            height: 45,
+            textAlign: "center",
+            width: "100%"
           }}
+          keyboardType="number-pad"
           placeholder={"Entre com seu ID"}
         />
       </View>

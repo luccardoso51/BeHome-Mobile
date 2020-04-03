@@ -7,10 +7,10 @@ import Feed from "../screens/Feed";
 const Stack = createStackNavigator(
   {
     Login,
-    Feed,
+    Feed
   },
   {
-    initialRouteName: "Login",
+    initialRouteName: "Feed",
     headerMode: "none",
     mode: "modal"
   }
