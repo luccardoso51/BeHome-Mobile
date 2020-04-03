@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
-import LoginBox from "../components/LoginBox";
+import RegisterBox from "../components/RegisterBox";
 import { useNavigation } from "react-navigation-hooks";
+import MyStyles from "../assets/styles/MyStyles";
 
 import BehomeLogo from "../assets/images/BeHome.png";
 import BehomeSecond from "../assets/images/SecondName.png";
@@ -34,7 +35,7 @@ export default function screens() {
         />
       </View>
 
-      <LoginBox
+      <RegisterBox
         onPress={() => {
           navigate("Feed");
         }}
@@ -42,22 +43,19 @@ export default function screens() {
 
       <TouchableOpacity
         onPress={() => {
-          navigate("Register");
+          navigate("Login");
         }}
       >
-        <Text style={{ fontSize: 18, paddingTop: 10, color: "#000" }}>
-          Não tenho cadastro
+        <Text
+          style={{
+            fontSize: 18,
+            paddingTop: 70,
+            color: MyStyles.colors.primary
+          }}
+        >
+          Voltar
         </Text>
       </TouchableOpacity>
-
-      <View style={styles.imageView}>
-        <Image
-          style={{ width: "100%", height: 225, marginTop: 30 }}
-          resizeMethod="resize"
-          resizeMode="contain"
-          source={loginImage}
-        />
-      </View>
     </View>
   );
 }

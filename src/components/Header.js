@@ -32,7 +32,10 @@ export default function Header(props) {
       )}
 
       {props.goBack ? null : (
-        <TouchableOpacity style={{ paddingLeft: 20 }}>
+        <TouchableOpacity
+          onPress={props.OnPressMyPosts}
+          style={{ paddingLeft: 20 }}
+        >
           <Text
             style={{
               fontSize: 16,

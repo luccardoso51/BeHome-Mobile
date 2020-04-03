@@ -1,21 +1,19 @@
 import React from "react";
-import { View, StyleSheet, ScrollView } from "react-native";
+import { View, StyleSheet, ScrollView, Text } from "react-native";
 import Header from "../components/Header";
-import PostBox from "../components/PostBox";
 import { useNavigation } from "react-navigation-hooks";
+import MyStyles from "../assets/styles/MyStyles";
+import PostBoxEdit from "../components/PostBoxEdit";
 import CreatePostButton from "../components/CreatePostButton";
 
 // import { Container } from './styles';
 
-export default function components() {
+export default function MyPosts() {
   const { navigate, goBack } = useNavigation();
 
   return (
     <View style={styles.container}>
-      <Header
-        onPressOut={() => navigate("Login")}
-        OnPressMyPosts={() => navigate("MyPosts")}
-      />
+      <Header goBack={true} onPressBack={() => navigate("Feed")} />
       <View
         style={{
           justifyContent: "center"
@@ -23,18 +21,26 @@ export default function components() {
       >
         <ScrollView
           style={{
-            paddingTop: 20,
             paddingHorizontal: 20,
             width: "100%",
             marginBottom: 45
           }}
         >
-          <PostBox />
-          <PostBox />
-          <PostBox />
-          <PostBox />
-        </ScrollView>
+          <Text
+            style={{
+              fontSize: 20,
+              paddingVertical: 20,
+              color: MyStyles.colors.primary
+            }}
+          >
+            Minhas publicações
+          </Text>
 
+          <PostBoxEdit />
+          <PostBoxEdit />
+          <PostBoxEdit />
+          <PostBoxEdit />
+        </ScrollView>
         <CreatePostButton />
       </View>
     </View>
