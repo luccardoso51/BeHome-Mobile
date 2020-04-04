@@ -30,6 +30,7 @@ export default function RegisterBox(props) {
             width: "100%"
           }}
           // keyboardType="number-pad"
+          onChangeText={props.onChangeName}
           placeholder={"Nome e sobrenome"}
         />
       </View>
@@ -42,6 +43,7 @@ export default function RegisterBox(props) {
             width: "100%"
           }}
           // keyboardType="number-pad"
+          onChangeText={props.onChangeEmail}
           placeholder={"Seu email"}
         />
       </View>

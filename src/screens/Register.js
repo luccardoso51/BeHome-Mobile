@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import RegisterBox from "../components/RegisterBox";
 import { useNavigation } from "react-navigation-hooks";
+import api from "../services/api";
+
 import MyStyles from "../assets/styles/MyStyles";
 
 import BehomeLogo from "../assets/images/BeHome.png";
@@ -13,6 +15,32 @@ import loginImage from "../assets/images/loginImage.png";
 export default function screens() {
   const { navigate } = useNavigation();
 
+  const [info, setInfo] = useState({
+    name: "",
+    email: ""
+  });
+
+  async function handleRegister() {
+    // e.preventDefault();
+
+    console.log(info);
+
+    const data = {
+      name: info.name,
+      email: info.email
+    };
+
+    try {
+      const response = await api.post("users", data);
+
+      alert(`Seu ID de acesso: ${response.data.id}`);
+
+      navigate("Login");
+    } catch (err) {
+      alert("Erro no cadastro, tente novamente.");
+      console.log(err);
+    }
+  }
   return (
     <View style={styles.container}>
       <View style={styles.imageViewLogo}>
@@ -37,15 +65,13 @@ export default function screens() {
 
       <RegisterBox
         onPress={() => {
-          navigate("Feed");
+          handleRegister();
         }}
+        onChangeName={name => setInfo({ ...info, name })}
+        onChangeEmail={email => setInfo({ ...info, email })}
       />
 
-      <TouchableOpacity
-        onPress={() => {
-          navigate("Login");
-        }}
-      >
+      <TouchableOpacity onPress={handleRegister}>
         <Text
           style={{
             fontSize: 18,
