@@ -53,7 +53,8 @@ export default function components(props) {
             textAlign: "center",
             width: "100%"
           }}
-          keyboardType="number-pad"
+          onChangeText={props.onChangeID}
+          // keyboardType="number-pad"
           placeholder={"Entre com seu ID"}
         />
       </View>

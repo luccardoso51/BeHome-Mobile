@@ -23,15 +23,18 @@ export default function screens() {
   async function handleRegister() {
     // e.preventDefault();
 
-    console.log(info);
-
     const data = {
       name: info.name,
       email: info.email
     };
 
+    console.log(data);
+
     try {
-      const response = await api.post("users", data);
+      const response = await api.post("users", {
+        name: info.name,
+        email: info.email
+      });
 
       alert(`Seu ID de acesso: ${response.data.id}`);
 
@@ -65,7 +68,7 @@ export default function screens() {
 
       <RegisterBox
         onPress={() => {
-          handleRegister();
+          navigate("Login");
         }}
         onChangeName={name => setInfo({ ...info, name })}
         onChangeEmail={email => setInfo({ ...info, email })}

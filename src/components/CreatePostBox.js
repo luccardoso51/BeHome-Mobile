@@ -72,6 +72,16 @@ export default function CreatePostBox(props) {
         returnKeyType="done"
         returnKeyType="done"
       />
+
+      <View style={styles.inputView}>
+        <TextInput
+          style={{
+            height: 40,
+            width: "100%"
+          }}
+          placeholder={"Link de acesso"}
+        />
+      </View>
       {/* </View> */}
 
       <View style={{ width: "100%", marginVertical: 5, paddingHorizontal: 5 }}>

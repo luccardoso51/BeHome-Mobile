@@ -24,7 +24,7 @@ const MyStyles = {
     secondary: "#343434",
     gray: "#ccc",
     blue: "#1077de",
-    white: "#f0f0f0",
+    white: "#fff",
     black: "#1f1f1f",
     darks: {
       "90": "rgba(0,0,0,0.9)",

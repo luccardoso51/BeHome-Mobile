@@ -17,7 +17,7 @@ const Stack = createStackNavigator(
     CreatePost
   },
   {
-    initialRouteName: "Login",
+    initialRouteName: "Feed",
     headerMode: "none",
     mode: "modal"
   }

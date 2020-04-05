@@ -58,7 +58,7 @@ export default function Header(props) {
 const styles = StyleSheet.create({
   headerContainer: {
     width: "100%",
-    paddingVertical: 25,
+    paddingVertical: 15,
     backgroundColor: "#fff",
     paddingHorizontal: 20,
     justifyContent: "space-between",

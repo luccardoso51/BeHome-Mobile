@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import LoginBox from "../components/LoginBox";
 import { useNavigation } from "react-navigation-hooks";
+import api from "../services/api";
 
 import BehomeLogo from "../assets/images/BeHome.png";
 import BehomeSecond from "../assets/images/SecondName.png";
@@ -10,7 +11,25 @@ import loginImage from "../assets/images/loginImage.png";
 // import { Container } from './styles';
 
 export default function screens() {
+  const [id, setId] = useState("");
   const { navigate } = useNavigation();
+
+  async function handleLogin() {
+    // e.preventDefault();
+
+    try {
+      // const response = await api.post("sessions", { id });
+
+      // localStorage.setItem("ongId", id);
+      // localStorage.setItem("ongName", response.data.name);
+
+      navigate("Feed");
+      // console.log(response);
+    } catch (err) {
+      alert("Falha no login, tente novamente.");
+      console.log(err);
+    }
+  }
 
   return (
     <View style={styles.container}>
@@ -34,11 +53,7 @@ export default function screens() {
         />
       </View>
 
-      <LoginBox
-        onPress={() => {
-          navigate("Feed");
-        }}
-      />
+      <LoginBox onChangeID={txt => setId(txt)} onPress={handleLogin} />
 
       <TouchableOpacity
         onPress={() => {
