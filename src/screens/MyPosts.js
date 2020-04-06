@@ -74,7 +74,7 @@ export default function MyPosts() {
       >
         <ScrollView
           style={{
-            paddingHorizontal: 20,
+            paddingHorizontal: 15,
             width: "100%"
             // marginBottom: 45
           }}

@@ -14,7 +14,13 @@ export default function CreatePostButton() {
       onPress={() => navigate("CreatePost")}
       style={styles.goButton}
     >
-      <Text style={{ fontSize: 16, color: MyStyles.colors.white }}>
+      <Text
+        style={{
+          fontSize: 16,
+          color: MyStyles.colors.white,
+          fontWeight: "bold"
+        }}
+      >
         Criar uma nova publicação
       </Text>
     </TouchableOpacity>

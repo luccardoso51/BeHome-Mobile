@@ -39,14 +39,14 @@ export default function PostBox(props) {
       />
       <View style={{ width: "100%", paddingVertical: 5, paddingHorizontal: 5 }}>
         <View>
-          <Text style={{ textAlign: "auto", fontSize: 16, fontWeight: "bold" }}>
+          <Text style={{ textAlign: "auto", fontSize: 18, fontWeight: "bold" }}>
             {props.Title}
           </Text>
           {/* <Text>{props.Author} </Text> */}
         </View>
 
         <View style={{ width: "100%", paddingVertical: 5 }}>
-          <Text style={{ textAlign: "auto", fontSize: 14 }}>
+          <Text style={{ textAlign: "auto", fontSize: 16 }}>
             {props.Description}
           </Text>
         </View>
