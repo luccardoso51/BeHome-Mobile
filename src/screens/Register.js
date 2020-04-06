@@ -67,14 +67,16 @@ export default function screens() {
       </View>
 
       <RegisterBox
-        onPress={() => {
-          navigate("Login");
-        }}
+        onPress={handleRegister}
         onChangeName={name => setInfo({ ...info, name })}
         onChangeEmail={email => setInfo({ ...info, email })}
       />
 
-      <TouchableOpacity onPress={handleRegister}>
+      <TouchableOpacity
+        onPress={() => {
+          navigate("Login");
+        }}
+      >
         <Text
           style={{
             fontSize: 18,

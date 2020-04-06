@@ -9,7 +9,7 @@ export default function CategoriesButtons(props) {
   let categorieName = "Todas";
   switch (props.Categorie) {
     case 0:
-      buttonColor = "#FF7B7B";
+      buttonColor = MyStyles.colors.orange;
       categorieName = "Todas";
       break;
 

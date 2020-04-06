@@ -14,7 +14,7 @@ export default function CreatePostButton() {
       onPress={() => navigate("CreatePost")}
       style={styles.goButton}
     >
-      <Text style={{ fontSize: 16, color: MyStyles.colors.primary }}>
+      <Text style={{ fontSize: 16, color: MyStyles.colors.white }}>
         Criar uma nova publicação
       </Text>
     </TouchableOpacity>
@@ -25,10 +25,10 @@ const styles = StyleSheet.create({
   goButton: {
     paddingHorizontal: 40,
     paddingVertical: 15,
-    backgroundColor: MyStyles.colors.white,
+    backgroundColor: MyStyles.colors.orange,
     borderRadius: 50 / 2,
-    borderWidth: 0.5,
-    borderColor: MyStyles.colors.primary,
+    // borderWidth: 0.5,
+    // borderColor: MyStyles.colors.primary,
     shadowColor: "#000",
     shadowOpacity: 0.2,
     shadowOffset: {
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     // position: "absolute",
     alignItems: "center",
     marginTop: 60,
-    bottom: 150,
+    bottom: 130,
     alignSelf: "center",
     justifyContent: "center"
   }

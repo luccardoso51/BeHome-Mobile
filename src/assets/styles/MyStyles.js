@@ -22,6 +22,7 @@ const MyStyles = {
   colors: {
     primary: "#FF7B7B",
     secondary: "#343434",
+    orange: "#F78F4F",
     gray: "#ccc",
     blue: "#1077de",
     white: "#fff",

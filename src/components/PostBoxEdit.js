@@ -6,7 +6,7 @@ import MyStyles from "../assets/styles/MyStyles";
 
 import postImage from "../assets/images/postImage.jpg";
 
-export default function PostBoxEdit() {
+export default function PostBoxEdit(props) {
   const loremIpsum =
     "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et";
 
@@ -28,7 +28,9 @@ export default function PostBoxEdit() {
           }}
           resizeMethod="resize"
           resizeMode="cover"
-          source={postImage}
+          source={{
+            uri: props.Img_url
+          }}
         />
       </View>
       <View
@@ -40,12 +42,16 @@ export default function PostBoxEdit() {
       />
       <View style={{ width: "100%", paddingVertical: 5, paddingHorizontal: 5 }}>
         <View>
-          <Text style={{ textAlign: "auto", fontSize: 16 }}>{title} </Text>
-          <Text>{author} </Text>
+          <Text style={{ textAlign: "auto", fontSize: 16, fontWeight: "bold" }}>
+            {props.Title}
+          </Text>
+          {/* <Text>{props.Author} </Text> */}
         </View>
 
         <View style={{ width: "100%", paddingVertical: 5 }}>
-          <Text style={{ textAlign: "auto", fontSize: 14 }}>{loremIpsum}</Text>
+          <Text style={{ textAlign: "auto", fontSize: 14 }}>
+            {props.Description}
+          </Text>
         </View>
 
         <View
@@ -59,7 +65,10 @@ export default function PostBoxEdit() {
           }}
         >
           {/* <TouchableOpacity style={styles.likeButton}></TouchableOpacity> */}
-          <TouchableOpacity style={styles.goButton}>
+          <TouchableOpacity
+            onPress={props.OnPressContent}
+            style={styles.goButton}
+          >
             <Text style={{ fontSize: 16, color: "#fff" }}>Acessar</Text>
           </TouchableOpacity>
           {/* <TouchableOpacity style={styles.likeButton}></TouchableOpacity> */}
